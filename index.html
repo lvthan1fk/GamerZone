@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameZone</title>
+  <link rel="stylesheet" href="Styles/main.css"> <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body>
+  <script src="scripts/main.js"></script> <!-- Enlace al archivo JS externo -->
+  <script src="scripts/validacion.js"></script> <!-- Enlace al archivo de validación -->
+  <script src="scripts/search.js"></script><!-- Enlace al archivo de búsqueda -->
+</head>
+<body>
+  <header>
+    <!-- Barra de navegación -->
+  <nav class="navbar">
+  <div class="nav-left">
+    <img src="assets/logo.jpg" alt="Logo GameZone" class="logo-img">
+  </div>
+  <div class="nav-center">
+    <span class="logo">
+      <span class="logo-game">Game</span><span class="logo-zone">Zone</span>
+    </span>
+  </div>
+  <!-- Botones de navegación -->
+<div class="nav-right nav-links">
+  <button class="custom-btn btn-3" onclick="showSection('inicio')"><span>Inicio</span></button>
+  <button class="custom-btn btn-3" onclick="showSection('noticias')"><span>Noticias</span></button>
+  <button class="custom-btn btn-3" onclick="showSection('reviews')"><span>Reviews</span></button>
+  <button class="custom-btn btn-3" onclick="showSection('quienes-somos')"><span>About me</span></button>
+  <button class="custom-btn btn-3" onclick="showSection('contacto')"><span>Contacto</span></button>
+</div>
+</nav>
+<!-- Barra de búsqueda debajo de la navegación -->
+<div class="buscador-container">
+  <input type="text" id="buscador" placeholder="Buscar..." onkeyup="buscarContenido()" class="form-input">
+</div>
+    </div>
+  </header>
+  <!-- Contenido principal -->
+  <main class="container">
+    <section id="inicio" class="section">
+      <div class="post">
+        <h2>Bienvenido a GameZone Blog</h2>
+        <p>¡Tu fuente de noticias, análisis y novedades sobre videojuegos! Explora las últimas tendencias, descubre nuevos lanzamientos y comparte tu pasión por los videojuegos con nuestra comunidad.</p>
+        <p>GameZone Blog es el espacio ideal para los amantes de los videojuegos. En este blog encontrarás noticias actualizadas sobre lanzamientos, análisis detallados de los títulos más populares y reseñas honestas para ayudarte a elegir tu próxima aventura digital. Además, compartiremos trucos, guías y curiosidades del mundo gamer. Nuestra comunidad podrá participar en debates, dejar sus opiniones y sugerir temas para futuros artículos. ¡Únete y vive la pasión por los videojuegos con nosotros!</p>
+         <p>En GameZone Blog nos apasiona el mundo gamer. Aquí encontrarás información actualizada sobre los títulos más esperados, avances exclusivos, y todo lo que necesitas saber sobre consolas, PC y dispositivos móviles. Nuestro objetivo es mantenerte informado y ayudarte a sacar el máximo provecho de tu experiencia de juego.</p>
+    <p>Además de noticias y reseñas, publicamos guías, trucos y consejos para que mejores tus habilidades y disfrutes aún más de tus juegos favoritos. Nuestra comunidad es un espacio abierto para debatir, compartir opiniones y descubrir nuevas amistades con la misma afición.</p>
+        <p>¡No te pierdas nuestras secciones de noticias, análisis y contacto! Estamos aquí para ofrecerte el mejor contenido sobre videojuegos y hacer de GameZone Blog tu lugar de referencia en la red.</p>
+        <p>¿Tienes un juego que te gustaría que reseñáramos? ¿Quieres compartir tus experiencias o consejos? ¡Contáctanos! Estamos abiertos a colaboraciones y sugerencias para enriquecer nuestra comunidad.</p>
+    <p>¿Eres desarrollador indie o tienes un proyecto relacionado con videojuegos? ¡Contáctanos! Nos encanta apoyar el talento emergente y dar visibilidad a nuevas propuestas dentro de la industria.</p>
+        <p>¡Gracias por visitarnos! Esperamos que disfrutes de GameZone Blog tanto como nosotros disfrutamos creándolo para ti.</p>
+        <p>¡Mantente conectado y no te pierdas ninguna actualización! Síguenos en nuestras redes sociales para estar al tanto de las últimas noticias y novedades del mundo gamer.</p>
+    </div>
+    </section>
+    <!-- Sección de noticias -->
+    <section id="noticias" class="section" style="display:none;">
+  <div class="post">
+    <h2>Últimas Noticias</h2>
+    <article>
+      <h3>PlayStation anuncia la llegada de la PS6</h3>
+      <img src="assets/PS6.webp" alt="PlayStation 6" class="news-img">
+      <p>Sony ha confirmado oficialmente el desarrollo de su próxima consola, prometiendo gráficos hiperrealistas y retrocompatibilidad total.</p>
+      <span class="news-date">06/08/2025</span>
+    </article>
+    <article>
+      <h3>Nuevo tráiler de "The Legend of Zelda: Echoes of Time"</h3>
+      <img src="assets/zelda-echoes.jpg" alt="Zelda Echoes of Time" class="news-img">
+      <p>Nintendo sorprende con un avance que muestra nuevas mecánicas y un mundo abierto aún más grande.</p>
+      <span class="news-date">05/08/2025</span>
+    </article>
+    <article>
+      <h3>Actualización masiva para Fortnite</h3>
+      <img src="assets/fortnite-update.jpg" alt="Fortnite Actualización" class="news-img">
+      <p>Epic Games lanza un parche que introduce un nuevo mapa, modos de juego y colaboraciones con franquicias populares.</p>
+      <span class="news-date">04/08/2025</span>
+    </article>
+    <article>
+      <h3>Xbox Game Pass suma 10 títulos AAA</h3>
+      <img src="assets/xbox-gamepass.webp" alt="Xbox Game Pass" class="news-img">
+      <p>Microsoft amplía su catálogo con juegos como "Cyberpunk 2078" y "FIFA 26".</p>
+      <span class="news-date">03/08/2025</span>
+    </article>
+    <article>
+      <h3>Se revela el primer gameplay de "Grand Theft Auto VI"</h3>
+      <img src="assets/gta6.jpg" alt="GTA VI Gameplay" class="news-img">
+      <p>Rockstar Games muestra detalles de la jugabilidad y ambientación en Vice City.</p>
+      <span class="news-date">02/08/2025</span>
+    </article>
+  </div>
+</section>
+   <!-- Sección de reseñas --> 
+    <section id="reviews" class="section" style="display:none;">
+  <div class="post">
+    <h2>Reviews Recientes</h2>
+    <article>
+      <h3>The Legend of Zelda: Echoes of Time</h3>
+      <img src="assets/zelda-echoes.jpg" alt="The Legend of Zelda: Echoes of Time" class="review-img">
+      <p>Una entrega que reinventa la saga con un mundo abierto aún más vasto y mecánicas innovadoras. Los gráficos y la música sumergen al jugador en una experiencia épica. Ideal para fans y nuevos jugadores.</p>
+    </article>
+    <article>
+      <h3>Grand Theft Auto VI</h3>
+      <img src="assets/gta6.jpg" alt="Grand Theft Auto VI" class="review-img">
+      <p>Rockstar vuelve a sorprender con una historia envolvente y una ciudad vibrante. El gameplay es fluido y las posibilidades de exploración parecen infinitas. Un imprescindible para los amantes de los sandbox.</p>
+    </article>
+    <article>
+      <h3>Fortnite (Actualización 2025)</h3>
+      <img src="assets/fortnite-2025.jpg" alt="Fortnite Actualización 2025" class="review-img">
+      <p>El nuevo mapa y los modos de juego refrescan la experiencia. Las colaboraciones con franquicias populares mantienen el juego relevante y divertido para todos los públicos.</p>
+    </article>
+    <article>
+      <h3>Cyberpunk 2078</h3>
+      <img src="assets/cyberpunk-2078.png" alt="Cyberpunk 2078" class="review-img">
+      <p>La esperada secuela mejora en todos los aspectos: historia, jugabilidad y optimización. Night City luce más viva que nunca y las nuevas misiones ofrecen horas de entretenimiento.</p>
+    </article>
+    <article>
+      <h3>FIFA 26</h3>
+      <img src="assets/fifa26.jpg" alt="FIFA 26" class="review-img">
+      <p>Con gráficos renovados y una jugabilidad más realista, FIFA 26 se consolida como el mejor simulador de fútbol. El modo carrera y las licencias oficiales siguen siendo sus grandes atractivos.</p>
+    </article>
+  </div>
+</section>
+<main class="container"></main>
+    <!-- Sección de contacto -->
+     <!-- Sección Quiénes somos -->
+  <section id="quienes-somos" class="section" style="display:none;">
+    <div class="post">
+      <h2>Quiénes somos</h2>
+      <p>GameZone Blog está formado por un equipo apasionado de gamers, periodistas y desarrolladores que comparten el objetivo de informar, entretener y conectar a la comunidad gamer hispanohablante. Nos dedicamos a ofrecer contenido actualizado, análisis honestos y un espacio para el debate y la colaboración.</p>
+      <p>Creemos en el poder de los videojuegos como medio cultural y social, y trabajamos para dar visibilidad tanto a grandes lanzamientos como a proyectos independientes. ¡Gracias por ser parte de nuestra comunidad!</p>
+    </div>
+  </section>
+  <!-- Sección Política de Privacidad y Aviso Legal -->
+  <section id="privacidad" class="section" style="display:none;">
+    <div class="post">
+      <h2>Política de Privacidad y Aviso Legal</h2>
+      <p>En GameZone Blog respetamos tu privacidad. Los datos personales recogidos a través del formulario de contacto se utilizan únicamente para responder a tus consultas y no se comparten con terceros. Puedes solicitar la eliminación de tus datos en cualquier momento.</p>
+      <p>Este sitio web es informativo y no se responsabiliza por el uso indebido de la información publicada. Para más detalles, contáctanos a través del formulario.</p>
+    </div>
+  </section>
+</main>
+    <section id="contacto" class="section" style="display:none;">
+      <div class="post">
+        <h2>Contacto</h2>
+<form id="contact-form" method="POST" action="formulario.php">
+  <label for="nombre">Nombre:</label><br>
+  <input type="text" id="nombre" name="nombre" required><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <label for="mensaje">Mensaje:</label><br>
+  <textarea id="mensaje" name="mensaje" required></textarea><br>
+  <button type="submit" class="custom-btn btn-3"><span>Enviar</span></button>
+  <div id="form-msg" style="margin-top:10px;"></div>
+</form>
+      </div>
+    </section>
+  </main>
+    <!-- Redes sociales -->
+    <div class="icons">
+      <a class="icons__link" href="https://www.facebook.com/manueldejesus.garciacastillo.5/" target="_blank">
+        <i class="icons__icons fab fa-facebook-square"></i>
+      </a>
+      <a class="icons__link" href="https://www.instagram.com/manuelg_lev/" target="_blank">
+        <i class="icons__icons fab fa-instagram"></i>
+      </a>
+      <a class="icons__link" href="https://github.com/lvthan1fk" target="_blank">
+        <i class="icons__icons fab fa-github"></i>
+      </a>      
+      <a class="icons__link" href="https://www.linkedin.com/in/manuel-garcia-4375a0205" target="_blank">
+        <i class="icons__icons fab fa-linkedin"></i>
+      </a>
+      <a class="icons__link" href="https://x.com/ManuelGarc84944" target="_blank">
+        <i class="icons__icons fab fa-twitter-square"></i>
+      </a>
+    </div>
+      
+  </nav>
+  <!-- Pie de página -->
+    <footer class="container">
+        <p>&copy; 2025 GameZone Blog. Todos los derechos reservados.</p>
+        <a href="#" onclick="showSection('privacidad'); return false;">Política de Privacidad y Aviso Legal</a>
+  </p>
+    </footer>

@@ -1,0 +1,340 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #181a1b;
+  color: #f3f3f3;
+}
+    header {
+      background: #23272a;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+/* Estilos del logo */
+.logo-img {
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+/* Diferentes estilos para "Game" y "Zone" */
+.logo-game {
+  color: #fff;
+  text-shadow: 1px 1px 8px #000000, 0 0 2px #23272a;
+}
+/* Estilo para "Logo" */
+.logo-zone {
+  color: #050505;
+  background: #fff;
+  border-radius: 70px;
+  padding: 6px 12px; /* Más espacio arriba/abajo y a los lados */
+  margin-left: 4px;
+  box-shadow: 1px 1px 8px #00bfff33;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+    /* Estilos de la barra de navegación */
+    .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.nav-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.nav-center {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Estilos de los enlaces de navegación */
+.nav-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-right: 1rem; 
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+/* Botón estilo 3 para barra de navegación */
+.btn-3 {
+  background: rgb(0,172,238);
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin-left: 0.3rem;
+  transition: background 0.3s, box-shadow 0.3s;
+  z-index: 1;
+}
+
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: color 0.3s;
+  z-index: 2;
+}
+
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover {
+  background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover {
+  color: rgba(2,126,251,1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+
+/* Ajuste para los botones activos */
+.btn-3.active,
+.btn-3.active span {
+  color: #fff;
+  background: linear-gradient(0deg, rgba(2,126,251,1) 0%, rgba(0,172,238,1) 100%);
+}
+
+/* Boton activo */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: #f3f3f3;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    main {
+      margin-top: 2rem;
+    }
+    .post {
+      background: #23272a;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .post h2 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+    /* Estilos para el buscador */
+    .buscador-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #413e3e; /* o el color de fondo de tu navbar */
+  padding: 15px 0;
+}
+
+.form-input, #buscador {
+  background: #181818;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-input:focus, #buscador:focus {
+  border: 1.5px solid #00bfff;
+}
+    /* Estilos para secciones */
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #23272a;
+        position: absolute;
+        top: 60px;
+        right: 1rem;
+        width: 180px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    /* Hace que el footer y los iconos estén siempre al fondo */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+main.container {
+  flex: 1;
+}
+
+    /* Estilos de los enlaces de redes sociales */
+    .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 24px 0 12px 0;
+}
+
+.icons__link {
+  color: #ffffff;
+  font-size: 2rem;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.icons__link:hover {
+  color: #007bff;
+}
+
+.icons__icons {
+  pointer-events: none;
+}
+/* Estilos de la sección de noticias */
+.news-img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 16px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.news-date {
+  display: block;
+  text-align: right;
+  color: #aaa;
+  font-size: 0.95rem;
+  margin-top: -8px;
+  margin-bottom: 16px;
+}
+/* Estilos de la sección de reseñas */
+.review-img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 16px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+/* Estilos de la sección de contacto */
+#contacto .post {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2.5rem 2rem;
+  background: #23272a;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+#contacto input,
+#contacto textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #2c2f33;
+  color: #fff;
+  box-sizing: border-box;
+}
+/* Estilos del pie de página */
+  footer.container {
+  text-align: center;
+  padding: 16px 0 8px 0;
+  background: #222;
+  color: #fff;
+  margin-top: 24px;
+  width: 100%;
+}
